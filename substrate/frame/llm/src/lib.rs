@@ -176,7 +176,6 @@ pub mod pallet {
 		/// Governance origin allowed to perform privileged Merit operations
 		type MeritGovernanceOrigin: EnsureOrigin<Self::RuntimeOrigin>;
 
-
 		#[pallet::constant]
 		type AssetId: Get<<Self as pallet_assets::Config>::AssetId>;
 		type AssetName: Get<Vec<u8>>;

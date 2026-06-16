@@ -1386,10 +1386,7 @@ impl pallet_llm::Config for Runtime {
 	type AssetSymbol = AssetSymbol;
 	type InflationEventInterval = InflationEventInterval;
 	type InflationEventReleaseFactor = InflationEventReleaseFactor;
-	type MeritGovernanceOrigin = EitherOfDiverse<
-		EnsureRoot<AccountId>,
-		EnsureCouncilMajority
-	>;
+	type MeritGovernanceOrigin = EitherOfDiverse<EnsureRoot<AccountId>, EnsureCouncilMajority>;
 	type OnLLMPoliticsUnlock = OnLLMPoliticsUnlock;
 	type WeightInfo = ();
 	type MaxCourts = ConstU32<2>;
