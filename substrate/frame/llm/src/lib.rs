@@ -289,7 +289,7 @@ pub mod pallet {
 		}
 
 		/// Transfer LLM from treasury to specified account. Can only be called
-		/// by Senate.
+		/// by `MeritGovernanceOrigin`.
 		///
 		/// - `to_account`: Account to transfer to.
 		/// - `amount`: Amount to transfer.
@@ -307,7 +307,7 @@ pub mod pallet {
 		}
 
 		/// Transfer LLM from treasury to specified account's politipool. Can
-		/// only be called by selected accounts and Senate.
+		/// only be called by `MeritGovernanceOrigin`.
 		///
 		/// - `to_account`: Account to transfer to.
 		/// - `amount`: Amount to transfer.
@@ -364,7 +364,7 @@ pub mod pallet {
 		}
 
 		/// Transfer LLD from treasury to specified account. Can only be called
-		/// by Senate.
+		/// by `MeritGovernanceOrigin`.
 		///
 		/// - `to_account`: Account to transfer to.
 		/// - `amount`: Amount to transfer.
