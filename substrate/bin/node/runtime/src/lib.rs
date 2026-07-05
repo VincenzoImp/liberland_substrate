@@ -2085,10 +2085,7 @@ pub type Executive = frame_executive::Executive<
 
 // All migrations executed on runtime upgrade as a nested tuple of types implementing
 // `OnRuntimeUpgrade`.
-type Migrations = (
-	// TODO: Migrations for spec version 32 - delete when bumping to version 33
-	crate::migrations::initialize_evm_chainid::Migration<Runtime>,
-);
+type Migrations = ();
 
 type EventRecord = frame_system::EventRecord<
 	<Runtime as frame_system::Config>::RuntimeEvent,
