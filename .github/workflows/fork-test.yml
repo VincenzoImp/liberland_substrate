@@ -38,7 +38,8 @@ jobs:
         run: |
             ./run-fork.sh mainnet.config.sh &
             cd check-unknowns
-            timeout 5m npx ts-node src/index.ts
+            yarn build
+            timeout 5m node dist/index.js
         working-directory: substrate/scripts/fork-test
 
       - name: Kill mainnet node
@@ -51,7 +52,8 @@ jobs:
         run: |
             ./run-fork.sh bastiat.config.sh &
             cd check-unknowns
-            timeout 5m npx ts-node src/index.ts
+            yarn build
+            timeout 5m node dist/index.js
         working-directory: substrate/scripts/fork-test
 
       - name: Kill bastiat node
